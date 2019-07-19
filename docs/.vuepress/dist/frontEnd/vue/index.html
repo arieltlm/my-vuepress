@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>兿芝梅 | first与vue亲密接触</title>
+    <meta name="description" content="只有出发，总会到达；只有出发，才会到达！">
+    <link rel="shortcut icon" href="/my-blog/images/favicon.ico">
+  <link rel="stylesheet" href="/my-blog/style/style.css">
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.5f45b4cf.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.c2d9e473.js" as="script"><link rel="preload" href="/my-blog/assets/js/8.cb150767.js" as="script"><link rel="preload" href="/my-blog/assets/js/34.37afa23d.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/12.b65eeaca.js"><link rel="prefetch" href="/my-blog/assets/js/1.6af14080.js"><link rel="prefetch" href="/my-blog/assets/js/2.f42c9f7c.js"><link rel="prefetch" href="/my-blog/assets/js/3.8f949e85.js"><link rel="prefetch" href="/my-blog/assets/js/4.9182cef7.js"><link rel="prefetch" href="/my-blog/assets/js/5.126c2f99.js"><link rel="prefetch" href="/my-blog/assets/js/6.1b5fb8e6.js"><link rel="prefetch" href="/my-blog/assets/js/7.dc92a253.js"><link rel="prefetch" href="/my-blog/assets/js/9.32ac0e16.js"><link rel="prefetch" href="/my-blog/assets/js/10.b8201a53.js"><link rel="prefetch" href="/my-blog/assets/js/11.b643f08e.js"><link rel="prefetch" href="/my-blog/assets/js/13.35a88c4f.js"><link rel="prefetch" href="/my-blog/assets/js/14.ea10057d.js"><link rel="prefetch" href="/my-blog/assets/js/15.df7b61cd.js"><link rel="prefetch" href="/my-blog/assets/js/16.b6ea61ef.js"><link rel="prefetch" href="/my-blog/assets/js/17.0160ad15.js"><link rel="prefetch" href="/my-blog/assets/js/18.0ea8fc9c.js"><link rel="prefetch" href="/my-blog/assets/js/19.19d9f7cb.js"><link rel="prefetch" href="/my-blog/assets/js/20.83956e73.js"><link rel="prefetch" href="/my-blog/assets/js/21.d5debcd2.js"><link rel="prefetch" href="/my-blog/assets/js/22.5775891a.js"><link rel="prefetch" href="/my-blog/assets/js/23.d8aae8c9.js"><link rel="prefetch" href="/my-blog/assets/js/24.ef9a0cac.js"><link rel="prefetch" href="/my-blog/assets/js/25.1792055b.js"><link rel="prefetch" href="/my-blog/assets/js/26.888914a2.js"><link rel="prefetch" href="/my-blog/assets/js/27.60395760.js"><link rel="prefetch" href="/my-blog/assets/js/28.52366dcf.js"><link rel="prefetch" href="/my-blog/assets/js/29.1c1535cf.js"><link rel="prefetch" href="/my-blog/assets/js/30.2df652a7.js"><link rel="prefetch" href="/my-blog/assets/js/31.dcb81cda.js"><link rel="prefetch" href="/my-blog/assets/js/32.3ddb4e3d.js"><link rel="prefetch" href="/my-blog/assets/js/33.f88e1280.js"><link rel="prefetch" href="/my-blog/assets/js/35.809fead5.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.5f45b4cf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/my-blog/" class="home-link router-link-active"><!----><span class="site-name">
+      兿芝梅
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/frontEnd/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/my-blog/life/" class="nav-link">平凡之路</a></div><div class="nav-item"><a href="https://github.com/arieltlm/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/frontEnd/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/my-blog/life/" class="nav-link">平凡之路</a></div><div class="nav-item"><a href="https://github.com/arieltlm/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>前端日常</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>vue 故事</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/my-blog/frontEnd/vue/" class="active sidebar-link">first与vue亲密接触</a></li><li><a href="/my-blog/frontEnd/vue/one.html" class="sidebar-link">checklist---vue</a></li><li><a href="/my-blog/frontEnd/vue/two.html" class="sidebar-link">vue中请求本地数据</a></li><li><a href="/my-blog/frontEnd/vue/three.html" class="sidebar-link">使用bus实现父子兄弟跨级间传值</a></li><li><a href="/my-blog/frontEnd/vue/four.html" class="sidebar-link">再次与vue接触的填坑之路</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>react大事</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>项目相随</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>折腾折腾</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>碎片时间</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>工具收藏</span><span class="arrow right"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="first与vue亲密接触"><a href="#first与vue亲密接触" aria-hidden="true" class="header-anchor">#</a> first与vue亲密接触</h1><h2 id="挖坑和填坑之路"><a href="#挖坑和填坑之路" aria-hidden="true" class="header-anchor">#</a> 挖坑和填坑之路</h2><blockquote><p>2018-05-28
+<div class="tag-part" data-v-5d842670><span class="vue-bgcolor" data-v-5d842670>vue</span></div></p></blockquote><p></p><div class="table-of-contents"><ul><li><a href="#挖坑和填坑之路">挖坑和填坑之路</a></li><li><a href="#_1-vuex以及本地存储localstorage如何实现登录之后在刷新的时候登录状态仍然在。">1. vuex以及本地存储localStorage如何实现登录之后在刷新的时候登录状态仍然在。</a></li><li><a href="#_2-computed-property-digitalcert-was-assigned-to-but-it-has-no-setter-报错">2. Computed property &quot;digitalCert&quot; was assigned to but it has no setter 报错</a></li><li><a href="#_3-在引入mapstate的计算属性时，怎么写普通的计算属性，以及设置getter和setter的计算属性：">3. 在引入mapState的计算属性时，怎么写普通的计算属性，以及设置getter和setter的计算属性：</a></li><li><a href="#_4-vuex中的请求写成promise格式的好处。">4.vuex中的请求写成promise格式的好处。</a></li><li><a href="#_5-数组初始化在data中而非在computed中；数组的更新必须vue-set">5. 数组初始化在data中而非在computed中；数组的更新必须vue.set</a></li><li><a href="#_6-vue中定时器的处理">6. vue中定时器的处理</a><ul><li><a href="#_2-离开此标签页的时候，清除定时器，返回此标签页时再启动">(2) 离开此标签页的时候，清除定时器，返回此标签页时再启动</a></li><li><a href="#（3）-在可视区域时启动定时器，不在时清除定时请求">（3） 在可视区域时启动定时器，不在时清除定时请求</a></li><li><a href="#（4）定时器必须在组件生命周期的destory时清除。（必须）">（4）定时器必须在组件生命周期的destory时清除。（必须）</a></li></ul></li><li><a href="#_7-自定义指令">7.自定义指令</a></li><li><a href="#_8-vue-router-的理解">8.vue-router 的理解</a></li><li><a href="#_9-vue-router的守卫">9.vue-router的守卫</a><ul><li><a href="#完整的导航解析流程">完整的导航解析流程</a></li></ul></li><li><a href="#_10-vue中获取input的type">10.vue中获取input的type</a></li><li><a href="#_11-vue中实现密码可见不可见">11.vue中实现密码可见不可见</a></li><li><a href="#_12-for循环上需要有key标志，标志唯一性，否则报warning。">12.for循环上需要有key标志，标志唯一性，否则报warning。</a></li><li><a href="#_13-vue中title图标的添加">13.vue中title图标的添加</a></li><li><a href="#_14-ie11中打开vue项目页面一片空白">14.ie11中打开vue项目页面一片空白</a></li><li><a href="#_15-为何vue不支持ie8">15.为何vue不支持IE8</a></li><li><a href="#_16-vue的js中的动态html中的img的src写法">16.vue的js中的动态html中的img的src写法</a></li></ul></div><p></p><h2 id="_1-vuex以及本地存储localstorage如何实现登录之后在刷新的时候登录状态仍然在。"><a href="#_1-vuex以及本地存储localstorage如何实现登录之后在刷新的时候登录状态仍然在。" aria-hidden="true" class="header-anchor">#</a> 1. vuex以及本地存储localStorage如何实现登录之后在刷新的时候登录状态仍然在。</h2><blockquote><p>借鉴这篇回答：<a href="https://segmentfault.com/q/1010000012065855" target="_blank" rel="noopener noreferrer">如何使用localStorage结合Vuex来保存用户登录信息?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote><p>遇到问题——当时是期待根据localStorage中的值的改变在计算属性中随时得到新的值。事实上。vue中的值并不会因为localStorage中值的改变而变化的，触发不了。所以完美的办法就是所有和localStorage相关的都在vuex中处理，这样状态就可以实时改变了。</p><p>当时我的问题是——我想每次进入页面后检测现在localStorage中是否有登录的信息，有的话就从localStorage中取，没有的话从vuex中取，这步其实就是等待登录后拿到值，然后在我退出登录时，我清空localStorage里面的值，此时就不能进行一些操作或者一些显示。。。。我是在计算属性中获取的。</p><p>后来借鉴上文的回答，一进入页面触发vuex，去把localStorage中的值给vuex中的状态值，然后在组件中只是用状态值就行。所有localStorage的设置值和移除值均在vuex中完成。</p><p>整个处理方式就是这样的，很重要，要记住。由于项目在后面改变了方式，所以我又改变了不再使用localStorage来储存值了。</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//一进入页面</span>
+<span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getLocalData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+	<span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	    getLocalData<span class="token punctuation">:</span><span class="token string">'getLocalData'</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//vuex中</span>
+<span class="token function">getLocalData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">commit</span><span class="token punctuation">(</span>types<span class="token punctuation">.</span><span class="token constant">GET_LOCALDATA</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">[</span>types<span class="token punctuation">.</span><span class="token constant">GET_LOCALDATA</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+		state<span class="token punctuation">.</span>sfz <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>sfz<span class="token punctuation">;</span>
+		state<span class="token punctuation">.</span>user <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+		state<span class="token punctuation">.</span>pwd <span class="token operator">=</span> localStorage<span class="token punctuation">.</span>pwd<span class="token punctuation">;</span>
+		state<span class="token punctuation">.</span>loginFlag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment">//退出登录</span>
+<span class="token punctuation">[</span>types<span class="token punctuation">.</span><span class="token constant">LOGIN_OUT</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'sfz'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'pwd'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>sfz <span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>pwd <span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>loginFlag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="_2-computed-property-digitalcert-was-assigned-to-but-it-has-no-setter-报错"><a href="#_2-computed-property-digitalcert-was-assigned-to-but-it-has-no-setter-报错" aria-hidden="true" class="header-anchor">#</a> 2. Computed property &quot;digitalCert&quot; was assigned to but it has no setter 报错</h2><p>问题分析： 一个计算属性，如果没有设置 setter,也就是传入的是一个函数，或者传入的对象里没有 set 属性，当你尝试直接该改变这个这个计算属性的值，都会报这个错误。</p><p>在此项目中，我写了:</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">var</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function-variable function">onkeydown</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>keyCode<span class="token operator">==</span><span class="token number">81</span> <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>ctrlKey <span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">//同时按下ctrl+q</span>
+        _this<span class="token punctuation">.</span>digitalCert <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   
+<span class="token punctuation">}</span>
+           
+</code></pre></div><p>所以更改为以下：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    digitalCert<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>digitalCert<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">set</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>digitalCert <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="_3-在引入mapstate的计算属性时，怎么写普通的计算属性，以及设置getter和setter的计算属性："><a href="#_3-在引入mapstate的计算属性时，怎么写普通的计算属性，以及设置getter和setter的计算属性：" aria-hidden="true" class="header-anchor">#</a> 3. 在引入mapState的计算属性时，怎么写普通的计算属性，以及设置getter和setter的计算属性：</h2><p><strong>有getter和setter</strong>：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    digitalCert<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token keyword">get</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>digitalCert<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">set</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>digitalCert <span class="token operator">=</span> newValue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        loginBoxFlag<span class="token punctuation">:</span> state <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>loginBoxshow<span class="token punctuation">,</span>
+        tipsTxt<span class="token punctuation">:</span> state <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>tipsTxt<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p><strong>普通计算属性</strong>：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// mapState 辅助函数帮助我们生成计算属</span>
+computed<span class="token punctuation">:</span> <span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 箭头函数可使代码更简练</span>
+    count<span class="token punctuation">:</span> state <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>count<span class="token punctuation">,</span>
+    <span class="token comment">// 传字符串参数 'count' 等同于 'state =&gt; state.count'</span>
+    countAlias<span class="token punctuation">:</span> <span class="token string">'count'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 为了能使用 'this'获取局部状态，必须使用常规函数</span>
+    <span class="token function">countPlusLocalState</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> state<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>localCount
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 常规 computed, 没有使用 store的状态</span>
+    <span class="token function">localCountAlias</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>localCount
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_4-vuex中的请求写成promise格式的好处。"><a href="#_4-vuex中的请求写成promise格式的好处。" aria-hidden="true" class="header-anchor">#</a> 4.vuex中的请求写成promise格式的好处。</h2><p>在vuex的action里面的请求要写成promise的形式。举例如我所做的logout。事实上登录的很多状态我也可以不在vuex里面维护的，没有必要，一开始不明白这个道理：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//在header.vue中点击按钮触发logout方法</span>
+<span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> _this  <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$confirm</span><span class="token punctuation">(</span><span class="token string">'你确定要注销登录吗?'</span><span class="token punctuation">,</span> <span class="token string">'提示'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  		confirmButtonText<span class="token punctuation">:</span> <span class="token string">'确定'</span><span class="token punctuation">,</span>
+  		cancelButtonText<span class="token punctuation">:</span> <span class="token string">'取消'</span><span class="token punctuation">,</span>
+  		type<span class="token punctuation">:</span> <span class="token string">'warning'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    	_this<span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'loginOut'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    	_this<span class="token punctuation">.</span>searchValue <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span><span class="token comment">//就可以这样清除本组件中的值，不需要去vuex中实现</span>
+    	_this<span class="token punctuation">.</span><span class="token function">$message</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+		  	type<span class="token punctuation">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+		  	message<span class="token punctuation">:</span> <span class="token string">'你已经成功退出登录'</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$message</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        	type<span class="token punctuation">:</span> <span class="token string">'info'</span><span class="token punctuation">,</span>
+       		message<span class="token punctuation">:</span> <span class="token string">'已取消注销登录'</span>
+      	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>在vuex中维护：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//actions中：</span>
+loginOut<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">{</span>dispatch<span class="token punctuation">,</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+		utils<span class="token punctuation">.</span>MlTools<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    		type<span class="token punctuation">:</span><span class="token string">'get'</span><span class="token punctuation">,</span>
+    		url<span class="token punctuation">:</span><span class="token string">'/qbeq/userLogOut'</span><span class="token punctuation">,</span>
+    		success<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    			<span class="token keyword">if</span><span class="token punctuation">(</span>datas<span class="token punctuation">.</span>code<span class="token punctuation">)</span><span class="token punctuation">{</span>
+					<span class="token function">commit</span><span class="token punctuation">(</span>types<span class="token punctuation">.</span><span class="token constant">LOGIN_OUT</span><span class="token punctuation">)</span>
+					<span class="token function">resolve</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span>
+    			<span class="token punctuation">}</span>
+    				
+    		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+    		error<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    			<span class="token function">reject</span><span class="token punctuation">(</span>datas<span class="token punctuation">)</span>
+    		<span class="token punctuation">}</span>
+    	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+		
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//在mutations中：</span>
+<span class="token punctuation">[</span>types<span class="token punctuation">.</span><span class="token constant">LOGIN_OUT</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	state<span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>sfz <span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>pwd <span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
+	state<span class="token punctuation">.</span>loginFlag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+</code></pre></div><p>重点就想说明在actions中resolve()之后，在vue组件的then之后即为退出成功的处理了。</p><h2 id="_5-数组初始化在data中而非在computed中；数组的更新必须vue-set"><a href="#_5-数组初始化在data中而非在computed中；数组的更新必须vue-set" aria-hidden="true" class="header-anchor">#</a> 5. 数组初始化在data中而非在computed中；数组的更新必须vue.set</h2><p>初始化data之后，要在请求中对这个数进行赋值，那么不能在computed中初始化，比如将这个数组的每一个元素都初始化为0；</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        trendValueIn<span class="token punctuation">:</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        trendValueOut<span class="token punctuation">:</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;,&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+   
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token comment">// trendValueIn(){</span>
+    <span class="token comment">//     return new Array(10).join(&quot;,&quot;).split(&quot;,&quot;).map((item,index) =&gt; {return 0;})</span>
+    <span class="token comment">// },</span>
+    <span class="token comment">// trendValueOut(){</span>
+    <span class="token comment">//     return new Array(10).join(&quot;,&quot;).split(&quot;,&quot;).map((item,index) =&gt; {return 0;})</span>
+    <span class="token comment">// },</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span>MlTools<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            url<span class="token punctuation">:</span> <span class="token string">'/qbeq/keyperson'</span><span class="token punctuation">,</span>
+            type<span class="token punctuation">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+            data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">success</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                _this<span class="token punctuation">.</span><span class="token function">createdtable</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>currDay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                _this<span class="token punctuation">.</span><span class="token function">drawLine</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>totalDay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">createdtable</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">//今日流入</span>
+        <span class="token keyword">let</span> todayDataIn <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>flag <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment">//今日流出</span>
+        <span class="token keyword">let</span> todayDataOut <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment">//总共的</span>
+        <span class="token keyword">let</span> totalIn <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>totalOut <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        todayDataIn<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> i <span class="token operator">=</span> _this<span class="token punctuation">.</span>theader<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> value <span class="token operator">==</span> item<span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            totalIn <span class="token operator">+=</span> item<span class="token punctuation">.</span>num<span class="token punctuation">;</span> 
+            <span class="token comment">// _this.trendValueIn[i] = item.num;</span>
+            _this<span class="token punctuation">.</span>$<span class="token keyword">set</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>trendValueIn<span class="token punctuation">,</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>item<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token comment">//更新数组需要使用vue.set</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        _this<span class="token punctuation">.</span>$<span class="token keyword">set</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>trendValueIn<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span>totalIn<span class="token punctuation">)</span>
+    
+        todayDataOut<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> i <span class="token operator">=</span> _this<span class="token punctuation">.</span>theader<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span>index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> value <span class="token operator">==</span> item<span class="token punctuation">.</span>type<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            totalOut <span class="token operator">+=</span> item<span class="token punctuation">.</span>num<span class="token punctuation">;</span> 
+            <span class="token comment">// _this.trendValueOut[i] = item.num;</span>
+            _this<span class="token punctuation">.</span>$<span class="token keyword">set</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>trendValueOut<span class="token punctuation">,</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>item<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token comment">//更新数组需要使用vue.set</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        _this<span class="token punctuation">.</span>$<span class="token keyword">set</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>trendValueOut<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span>totalOut<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_6-vue中定时器的处理"><a href="#_6-vue中定时器的处理" aria-hidden="true" class="header-anchor">#</a> 6. vue中定时器的处理</h2><p>###（1）一进入页面触发定时器定时发起请求</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> timeInterval <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span><span class="token comment">//10s</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        _this<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">// console.log(new Date())</span>
+            _this<span class="token punctuation">.</span><span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>timeInterval<span class="token punctuation">)</span>
+        
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-离开此标签页的时候，清除定时器，返回此标签页时再启动"><a href="#_2-离开此标签页的时候，清除定时器，返回此标签页时再启动" aria-hidden="true" class="header-anchor">#</a> (2) 离开此标签页的时候，清除定时器，返回此标签页时再启动</h3><blockquote><p>监测 <code>visibilitychange</code>事件</p></blockquote><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;visibilitychange&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token comment">// debugger;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>hidden<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我暂时离开页面了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">// console.log(new Date())</span>
+                _this<span class="token punctuation">.</span><span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>timeInterval<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h3 id="（3）-在可视区域时启动定时器，不在时清除定时请求"><a href="#（3）-在可视区域时启动定时器，不在时清除定时请求" aria-hidden="true" class="header-anchor">#</a> （3） 在可视区域时启动定时器，不在时清除定时请求</h3><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> timeInterval <span class="token operator">=</span> <span class="token number">10</span><span class="token operator">*</span><span class="token number">1000</span><span class="token punctuation">;</span><span class="token comment">//10s</span>
+
+<span class="token comment">// 由于我的定时器在一进入页面的时候，不在可视区域内，所以不用启动定时器，这块存在无作用</span>
+<span class="token comment">//this.$nextTick(function(){</span>
+<span class="token comment">//     if(isElementInViewport(document.getElementsByClassName(&quot;trend&quot;)[0])){</span>
+<span class="token comment">//             _this.timer = setInterval(function(){</span>
+<span class="token comment">//                 console.log(11111)</span>
+<span class="token comment">//                 console.log(new Date())</span>
+<span class="token comment">//                 _this.reqRrendValue()</span>
+
+<span class="token comment">//             },timeInterval) </span>
+<span class="token comment">//         }else{</span>
+<span class="token comment">//             console.log(&quot;不在可视区域，清除定时请求&quot;);</span>
+<span class="token comment">//             clearInterval(_this.timer);</span>
+<span class="token comment">//         }</span>
+    
+<span class="token comment">// })</span>
+
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;visibilitychange&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>hidden<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我暂时离开页面了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">isElementInViewport</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">&quot;trend&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2222222</span><span class="token punctuation">)</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                _this<span class="token punctuation">.</span><span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>timeInterval<span class="token punctuation">)</span> 
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;不在可视区域,清除定时请求&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//监测滚动事件</span>
+window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;scroll&quot;</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isElementInViewport</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">&quot;trend&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">isElementInViewport</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">&quot;trend&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        _this<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">333333</span><span class="token punctuation">)</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            _this<span class="token punctuation">.</span><span class="token function">reqRrendValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>timeInterval<span class="token punctuation">)</span> 
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;不在可视区域，清除定时请求&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">clearInterval</span><span class="token punctuation">(</span>_this<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//元素是否在可视区域内</span>
+<span class="token keyword">function</span> <span class="token function">isElementInViewport</span> <span class="token punctuation">(</span>el<span class="token punctuation">,</span> offset <span class="token operator">=</span> <span class="token number">23</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> box <span class="token operator">=</span> el<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          top <span class="token operator">=</span> <span class="token punctuation">(</span>box<span class="token punctuation">.</span>top <span class="token operator">&gt;=</span> <span class="token operator">-</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          left <span class="token operator">=</span> <span class="token punctuation">(</span>box<span class="token punctuation">.</span>left <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          bottom <span class="token operator">=</span> <span class="token punctuation">(</span>box<span class="token punctuation">.</span>bottom <span class="token operator">&lt;=</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>innerHeight <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientHeight<span class="token punctuation">)</span> <span class="token operator">+</span> offset<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          right <span class="token operator">=</span> <span class="token punctuation">(</span>box<span class="token punctuation">.</span>right <span class="token operator">&lt;=</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>innerWidth <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientWidth<span class="token punctuation">)</span> <span class="token operator">+</span> offset<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>top <span class="token operator">&amp;&amp;</span> bottom<span class="token operator">&amp;&amp;</span> left  <span class="token operator">&amp;&amp;</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="（4）定时器必须在组件生命周期的destory时清除。（必须）"><a href="#（4）定时器必须在组件生命周期的destory时清除。（必须）" aria-hidden="true" class="header-anchor">#</a> （4）定时器必须在组件生命周期的destory时清除。（必须）</h3><ul><li>在本组件中写的定时器</li></ul><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我已经离开页面了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><ul><li>引入的js</li></ul><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//在mapLoad.js中：</span>
+
+<span class="token keyword">var</span> scrollIntervalStart<span class="token punctuation">,</span>scrollInterval<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mapLoad <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span>mapLoad<span class="token punctuation">,</span>scrollIntervalStart<span class="token punctuation">,</span>scrollInterval<span class="token punctuation">}</span>
+
+<span class="token comment">//在map.vue中：</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>mapLoad<span class="token punctuation">,</span>scrollIntervalStart<span class="token punctuation">,</span>scrollInterval<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/common/mapLoad'</span><span class="token punctuation">;</span>
+
+<span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">//清除地图上的滚动定时</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我已经离开页面了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">clearInterval</span><span class="token punctuation">(</span>scrollIntervalStart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">clearInterval</span><span class="token punctuation">(</span>scrollInterval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="_7-自定义指令"><a href="#_7-自定义指令" aria-hidden="true" class="header-anchor">#</a> 7.自定义指令</h2><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 注册一个全局自定义指令 v-focus
+ */</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 当绑定元素插入到 DOM 中。</span>
+    inserted<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 聚焦元素</span>
+        el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 注册一个全局自定义指令 v-ctrlq,按下ctrl+q时执行操作
+ * 
+ */</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'ctrlq'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    bind<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span>binding<span class="token punctuation">,</span>vnode<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">documentHandler</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>e <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>keyCode<span class="token operator">==</span><span class="token number">81</span> <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>ctrlKey<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>binding<span class="token punctuation">.</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    binding<span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        el<span class="token punctuation">.</span>__ctrlq__ <span class="token operator">=</span> documentHandler<span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'keydown'</span><span class="token punctuation">,</span>documentHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    unbind<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span>binding<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'keydown'</span><span class="token punctuation">,</span>el<span class="token punctuation">.</span>__ctrlq__<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">delete</span> el<span class="token punctuation">.</span>__ctrlq__<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * 注册一个全局自定义指令 v-clickoutside,在元素之外点击时执行函数，如点击旁边收起下拉框
+ * 
+ */</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'clickoutside'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    bind<span class="token punctuation">:</span><span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">,</span> binding<span class="token punctuation">,</span> vnode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">documentHandler</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>el<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>binding<span class="token punctuation">.</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                binding<span class="token punctuation">.</span><span class="token function">value</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        el<span class="token punctuation">.</span>__vueClickOutside__ <span class="token operator">=</span> documentHandler<span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>documentHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    unbind<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>el<span class="token punctuation">,</span> binding<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span>el<span class="token punctuation">.</span>__vueClickOutside__<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">delete</span> el<span class="token punctuation">.</span>__vueClickOutside__<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="_8-vue-router-的理解"><a href="#_8-vue-router-的理解" aria-hidden="true" class="header-anchor">#</a> 8.vue-router 的理解</h2><p>vue本身起的项目一般为http://localhost:8080,也就是http://localhost:8080/index.html，我们的项目如果是简单的vue单页面应用的话，其本身就只有一个页面——index.html。而路由页就相当于加了几个hash切换，通过js动态加载其他几个页面的，所以其其实是http://localhost:8080/index.html/#/index，http://localhost:8080/index.html/#/list。</p><p>同时在服务器上，真实的页面也就只有index.html,所以使用vue-router的mode:history模式就有问题了（这个原理嘛。。。）官网上有处理办法，后端要配合进行配置才可以。</p><blockquote><p>(官网上)<a href="https://router.vuejs.org/zh/guide/essentials/history-mode.html" target="_blank" rel="noopener noreferrer">HTML5 History 模式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+vue-router 默认 hash 模式 —— 使用 URL 的 hash 来模拟一个完整的 URL，于是当 URL 改变时，页面不会重新加载。
+如果不想要很丑的 hash，我们可以用路由的 history 模式，这种模式充分利用 history.pushState API 来完成 URL 跳转而无须重新加载页面。</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token punctuation">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>当你使用 history 模式时，URL 就像正常的 url，例如 http://yoursite.com/user/id，也好看！
+不过这种模式要玩好，还需要后台配置支持。因为我们的应用是个单页客户端应用，如果后台没有正确的配置，当用户在浏览器直接访问 http://oursite.com/user/id 就会返回 404，这就不好看了。
+所以呢，你要在服务端增加一个覆盖所有情况的候选资源：如果 URL 匹配不到任何静态资源，则应该返回同一个 index.html 页面，这个页面就是你 app 依赖的页面。
+图片名字也都需要小写。</p></blockquote><h2 id="_9-vue-router的守卫"><a href="#_9-vue-router的守卫" aria-hidden="true" class="header-anchor">#</a> 9.vue-router的守卫</h2><p>本项目中要求在未登录之前，不能进入别的路由页，所以设置全局钩子：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	base<span class="token punctuation">:</span>__dirname<span class="token punctuation">,</span>
+	routes<span class="token punctuation">:</span>routes
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>to<span class="token punctuation">,</span><span class="token keyword">from</span><span class="token punctuation">,</span>next<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>requireAuth<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>login<span class="token punctuation">.</span>user<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+			<span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token punctuation">:</span><span class="token string">'/index'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+			store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'LOGIN_BOX'</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+		<span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>官网上————<a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%85%A8%E5%B1%80%E5%AE%88%E5%8D%AB" target="_blank" rel="noopener noreferrer">导航守卫<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><p><strong>路由单个守卫：</strong></p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">'/foo'</span><span class="token punctuation">,</span>
+      component<span class="token punctuation">:</span> Foo<span class="token punctuation">,</span>
+      beforeEnter<span class="token punctuation">:</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>组件内的守卫</strong>：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> Foo <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`...`</span></span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteEnter</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在渲染该组件的对应路由被 confirm 前调用</span>
+    <span class="token comment">// 不！能！获取组件实例 `this`</span>
+    <span class="token comment">// 因为当守卫执行前，组件实例还没被创建</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteUpdate</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 在当前路由改变，但是该组件被复用时调用</span>
+    <span class="token comment">// 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，</span>
+    <span class="token comment">// 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span>
+    <span class="token comment">// 可以访问组件实例 `this`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteLeave</span> <span class="token punctuation">(</span>to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 导航离开该组件的对应路由时调用</span>
+    <span class="token comment">// 可以访问组件实例 `this`</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="完整的导航解析流程"><a href="#完整的导航解析流程" aria-hidden="true" class="header-anchor">#</a> 完整的导航解析流程</h3><ul><li>导航被触发。</li><li>在失活的组件里调用离开守卫。</li><li>调用全局的 beforeEach 守卫。</li><li>在重用的组件里调用 beforeRouteUpdate 守卫 (2.2+)。</li><li>在路由配置里调用 beforeEnter。</li><li>解析异步路由组件。</li><li>在被激活的组件里调用 beforeRouteEnter。</li><li>调用全局的 beforeResolve 守卫 (2.5+)。</li><li>导航被确认。</li><li>调用全局的 afterEach 钩子。</li><li>触发 DOM 更新。</li><li>用创建好的实例调用 beforeRouteEnter</li><li>守卫中传给 next 的回调函数。</li></ul><h2 id="_10-vue中获取input的type"><a href="#_10-vue中获取input的type" aria-hidden="true" class="header-anchor">#</a> 10.vue中获取input的type</h2><p>聚集时改变type：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span> ref<span class="token operator">=</span><span class="token string">&quot;pwd&quot;</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">&quot;rgform.rgpwd&quot;</span> placeholder<span class="token operator">=</span><span class="token string">&quot;请输入密码&quot;</span> @focus<span class="token operator">=</span><span class="token string">&quot;changeType&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token function">changeType</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">'password'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token comment">//或者：</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>pwd<span class="token punctuation">.</span>type
+</code></pre></div><h2 id="_11-vue中实现密码可见不可见"><a href="#_11-vue中实现密码可见不可见" aria-hidden="true" class="header-anchor">#</a> 11.vue中实现密码可见不可见</h2><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rgform.rgpwd<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rgspwd<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>请输入密码<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewFlag<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rgform.rgpwd<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rgspwd<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>请输入密码<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-else</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>el-eye<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>changeView<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">changeView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>viewFlag<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_12-for循环上需要有key标志，标志唯一性，否则报warning。"><a href="#_12-for循环上需要有key标志，标志唯一性，否则报warning。" aria-hidden="true" class="header-anchor">#</a> 12.for循环上需要有key标志，标志唯一性，否则报warning。</h2><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span>  <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item in protalOptions<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item.name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="_13-vue中title图标的添加"><a href="#_13-vue中title图标的添加" aria-hidden="true" class="header-anchor">#</a> 13.vue中title图标的添加</h2><p>在webpack.dev.conf.js中：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code> <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  filename<span class="token punctuation">:</span> <span class="token string">'index.html'</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">'index.html'</span><span class="token punctuation">,</span>
+  inject<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  favicon<span class="token punctuation">:</span><span class="token string">'./favicon.ico'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</code></pre></div><p>同时生产环境中，在webpack.prod.conf.js中：</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  filename<span class="token punctuation">:</span> config<span class="token punctuation">.</span>build<span class="token punctuation">.</span>index<span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">'index.html'</span><span class="token punctuation">,</span>
+  inject<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  favicon<span class="token punctuation">:</span> <span class="token string">'./favicon.ico'</span><span class="token punctuation">,</span>
+  minify<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    removeComments<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    collapseWhitespace<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    removeAttributeQuotes<span class="token punctuation">:</span> <span class="token boolean">true</span>
+    <span class="token comment">// more options:</span>
+    <span class="token comment">// https://github.com/kangax/html-minifier#options-quick-reference</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="_14-ie11中打开vue项目页面一片空白"><a href="#_14-ie11中打开vue项目页面一片空白" aria-hidden="true" class="header-anchor">#</a> 14.ie11中打开vue项目页面一片空白</h2><p><a href="https://blog.csdn.net/bright2017/article/details/77850525" target="_blank" rel="noopener noreferrer">Vue2.0做的项目在IE11下面打开一片空白？<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><p>安装 &quot;babel-polyfill&quot; 即可。
+在入口main.js文件引入：import 'babel-polyfill'
+在webpack.base.conf.js中，</p><div class="language-javascript extra-class"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		app<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;babel-polyfill&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;./src/main.js&quot;</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="_15-为何vue不支持ie8"><a href="#_15-为何vue不支持ie8" aria-hidden="true" class="header-anchor">#</a> 15.为何vue不支持IE8</h2><p>（https://blog.csdn.net/csdn_yudong/article/details/78332665）
+因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。</p><p>但具体是哪些特性呢？</p><p><code>Object.defineProperty()</code>
+该方法允许精确添加或修改对象的属性。一般情况下，我们为对象添加属性是通过赋值来创建并显示在属性枚举中（for…in 或 Object.keys 方法），但这种方式添加的属性值可以被改变，也可以被删除。而使用 <code>Object.defineProperty()</code> 则允许改变这些额外细节的默认设置。例如，默认情况下，使用 <code>Object.defineProperty()</code>增加的属性值是不可改变的。</p><h2 id="_16-vue的js中的动态html中的img的src写法"><a href="#_16-vue的js中的动态html中的img的src写法" aria-hidden="true" class="header-anchor">#</a> 16.vue的js中的动态html中的img的src写法</h2><p>只要在script中的都需要用require()的格式加载图片</p><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> contentHtml <span class="token operator">=</span> <span class="token template-string"><span class="token string">`&lt;div class=&quot;popWrap&quot;&gt;
+    &lt;div class=&quot;popTop&quot;&gt;
+        &lt;div class=&quot;imgBox&quot;&gt;
+            &lt;img src=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;@/images/portait.jpg&quot;</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&gt;
+        &lt;/div&gt;
+        &lt;ul class=&quot;infoRight&quot;&gt;
+            &lt;li&gt;&lt;label&gt;姓&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;名:&lt;/label&gt;&lt;span&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cfeature<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'person_name'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/span&gt;
+            &lt;div class=&quot;hrefs&quot;&gt;&lt;a title=&quot;到档案&quot; class=&quot;popArchives&quot; data-card=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>cfeature<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'person_card'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;closePopup&quot;&gt;
+        &lt;span&gt;x&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;`</span></span><span class="token punctuation">;</span>
+overlay<span class="token punctuation">.</span><span class="token function">setPosition</span><span class="token punctuation">(</span>undefined<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>overlay<span class="token punctuation">.</span><span class="token function">getPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> undefined<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    overlay<span class="token punctuation">.</span><span class="token function">setPosition</span><span class="token punctuation">(</span>cfeature<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'center'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">.</span><span class="token function">getView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setCenter</span><span class="token punctuation">(</span>cfeature<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'center'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+map<span class="token punctuation">.</span><span class="token function">addOverlay</span><span class="token punctuation">(</span>overlay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#popup&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>contentHtml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/my-blog/frontEnd/front-daily/five.html" class="prev">
+          dll、node http/express的理解和实践
+        </a></span><span class="next"><a href="/my-blog/frontEnd/vue/one.html">
+          checklist---vue
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/my-blog/assets/js/8.cb150767.js" defer></script><script src="/my-blog/assets/js/34.37afa23d.js" defer></script><script src="/my-blog/assets/js/app.c2d9e473.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>兿芝梅 | 五个js技巧</title>
+    <meta name="description" content="只有出发，总会到达；只有出发，才会到达！">
+    <link rel="shortcut icon" href="/my-blog/images/favicon.ico">
+  <link rel="stylesheet" href="/my-blog/style/style.css">
+    
+    <link rel="preload" href="/my-blog/assets/css/0.styles.5f45b4cf.css" as="style"><link rel="preload" href="/my-blog/assets/js/app.c2d9e473.js" as="script"><link rel="preload" href="/my-blog/assets/js/12.b65eeaca.js" as="script"><link rel="preload" href="/my-blog/assets/js/34.37afa23d.js" as="script"><link rel="prefetch" href="/my-blog/assets/js/1.6af14080.js"><link rel="prefetch" href="/my-blog/assets/js/2.f42c9f7c.js"><link rel="prefetch" href="/my-blog/assets/js/3.8f949e85.js"><link rel="prefetch" href="/my-blog/assets/js/4.9182cef7.js"><link rel="prefetch" href="/my-blog/assets/js/5.126c2f99.js"><link rel="prefetch" href="/my-blog/assets/js/6.1b5fb8e6.js"><link rel="prefetch" href="/my-blog/assets/js/7.dc92a253.js"><link rel="prefetch" href="/my-blog/assets/js/8.cb150767.js"><link rel="prefetch" href="/my-blog/assets/js/9.32ac0e16.js"><link rel="prefetch" href="/my-blog/assets/js/10.b8201a53.js"><link rel="prefetch" href="/my-blog/assets/js/11.b643f08e.js"><link rel="prefetch" href="/my-blog/assets/js/13.35a88c4f.js"><link rel="prefetch" href="/my-blog/assets/js/14.ea10057d.js"><link rel="prefetch" href="/my-blog/assets/js/15.df7b61cd.js"><link rel="prefetch" href="/my-blog/assets/js/16.b6ea61ef.js"><link rel="prefetch" href="/my-blog/assets/js/17.0160ad15.js"><link rel="prefetch" href="/my-blog/assets/js/18.0ea8fc9c.js"><link rel="prefetch" href="/my-blog/assets/js/19.19d9f7cb.js"><link rel="prefetch" href="/my-blog/assets/js/20.83956e73.js"><link rel="prefetch" href="/my-blog/assets/js/21.d5debcd2.js"><link rel="prefetch" href="/my-blog/assets/js/22.5775891a.js"><link rel="prefetch" href="/my-blog/assets/js/23.d8aae8c9.js"><link rel="prefetch" href="/my-blog/assets/js/24.ef9a0cac.js"><link rel="prefetch" href="/my-blog/assets/js/25.1792055b.js"><link rel="prefetch" href="/my-blog/assets/js/26.888914a2.js"><link rel="prefetch" href="/my-blog/assets/js/27.60395760.js"><link rel="prefetch" href="/my-blog/assets/js/28.52366dcf.js"><link rel="prefetch" href="/my-blog/assets/js/29.1c1535cf.js"><link rel="prefetch" href="/my-blog/assets/js/30.2df652a7.js"><link rel="prefetch" href="/my-blog/assets/js/31.dcb81cda.js"><link rel="prefetch" href="/my-blog/assets/js/32.3ddb4e3d.js"><link rel="prefetch" href="/my-blog/assets/js/33.f88e1280.js"><link rel="prefetch" href="/my-blog/assets/js/35.809fead5.js">
+    <link rel="stylesheet" href="/my-blog/assets/css/0.styles.5f45b4cf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/my-blog/" class="home-link router-link-active"><!----><span class="site-name">
+      兿芝梅
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/frontEnd/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/my-blog/life/" class="nav-link">平凡之路</a></div><div class="nav-item"><a href="https://github.com/arieltlm/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/my-blog/frontEnd/" class="nav-link router-link-active">前端之路</a></div><div class="nav-item"><a href="/my-blog/life/" class="nav-link">平凡之路</a></div><div class="nav-item"><a href="https://github.com/arieltlm/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>前端日常</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>vue 故事</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>react大事</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>项目相随</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>折腾折腾</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>碎片时间</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/my-blog/frontEnd/review/" class="sidebar-link">2018尾巴①</a></li><li><a href="/my-blog/frontEnd/review/17-21.html" class="sidebar-link">2018尾巴②</a></li><li><a href="/my-blog/frontEnd/review/js5skill.html" class="active sidebar-link">五个js技巧</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>工具收藏</span><span class="arrow right"></span></p><!----></div></li></ul></div><div class="page"><div class="content"><h1 id="五个js技巧"><a href="#五个js技巧" aria-hidden="true" class="header-anchor">#</a> 五个js技巧</h1><blockquote><p>2019-07-16
+<div class="tag-part" data-v-5d842670><span data-v-5d842670>js</span></div></p></blockquote><p></p><div class="table-of-contents"><ul><li><a href="#_1、early-exits">1、early exits</a></li><li><a href="#_2、将switch代码写成object的形式更优">2、将switch代码写成object的形式更优</a></li><li><a href="#_3、嵌套三元">3、嵌套三元</a></li><li><a href="#_4、-变量命名的艺术">4、 变量命名的艺术</a></li><li><a href="#_5、一个循环把一个数组分成两个数组">5、一个循环把一个数组分成两个数组</a></li></ul></div><p></p><p>原文：【<a href="https://www.johnstewart.dev/five-programming-patterns-i-like/" target="_blank" rel="noopener noreferrer">5 Programming Patterns I Like<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>】
+这篇文章中列举了下面几个比较好的js使用技巧：</p><h2 id="_1、early-exits"><a href="#_1、early-exits" aria-hidden="true" class="header-anchor">#</a> 1、early exits</h2><p>对一些条件判断，提早做一些返回。这样能够注意到考虑的能更全面，能注意到参数的有效性；代码更好理解和可读；该函数读取更线性;嵌套减少，使功能更容易阅读。If-else构造将更紧密地结合在一起，你将更少地打开和关闭括号;</p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">transformData</span><span class="token punctuation">(</span>rawData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// check if no data</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>rawData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// check for specific case</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>rawData<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// actual function code goes here</span>
+  <span class="token keyword">return</span> rawData<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr><p><strong><a href="http://rikschennink.nl/thoughts/the-bouncer-pattern/" target="_blank" rel="noopener noreferrer">保镖模式（the bouncer pattern）<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>：</strong></p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fireZeMissiles</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// do ze firing!</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>amount<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'firing missile numéro'</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// fire a minion into ze volcano</span>
+        <span class="token function">fireMinion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span>
+</code></pre></div><p>对以上的代码实行the bouncer pattern进行重构：</p><div class="language- extra-class"><pre class="language-text"><code>function fireZeMissiles(amount) {
+    if (!amount) {
+        // au revoir mon minion!
+        fireMinion();
+        return;
+    }
+    
+    // fire ze actual missiles!
+    for (var i=0; i&lt;amount; i++) {
+        console.log('firing missile numéro', i + 1);
+    }
+    
+}
+</code></pre></div><p>当使用保镖模式时，我们首先测试参数有效性，然后转到实际的功能逻辑。当我们发现一个有争议的腥味时，我们使用该return语句来停止函数执行。</p><p><strong>[tlm]时刻：</strong></p><h2 id="_2、将switch代码写成object的形式更优"><a href="#_2、将switch代码写成object的形式更优" aria-hidden="true" class="header-anchor">#</a> 2、将switch代码写成object的形式更优</h2><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Switch</span>
+<span class="token keyword">let</span> createType <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">switch</span> <span class="token punctuation">(</span>contentType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> <span class="token string">&quot;post&quot;</span><span class="token punctuation">:</span>
+    <span class="token function-variable function">createType</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;creating a post...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">case</span> <span class="token string">&quot;video&quot;</span><span class="token punctuation">:</span>
+    <span class="token function-variable function">createType</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;creating a video...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span>
+    <span class="token function-variable function">createType</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'unrecognized content type'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">createType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Object literal</span>
+<span class="token keyword">const</span> contentTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  post<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;creating a post...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  video<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;creatinga  video...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'unrecognized content type'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> createType <span class="token operator">=</span> contentTypes<span class="token punctuation">[</span>contentType<span class="token punctuation">]</span> <span class="token operator">||</span> contentTypes<span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">createType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>作者提出对象方式[Object literal]是因为：</p><ul><li>常常在写switch时总会遗忘break（这点tlm不常有）</li><li>对象方式更容易读和理解，并且代码写的少</li></ul><hr><p><a href="https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals" target="_blank" rel="noopener noreferrer">用Object文字替换switch语句<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+这篇文章中提出一些观点：</p><ul><li><p>1）、**switch有这样的问题：**switch从程序控制流程到其处理代码块的非标准方式存在多个问题，其余的JavaScript使用花括号而交换机则不然。从语法上讲，它不是JavaScript的最佳选择，也不是它的设计。我们被迫break;在每个语句中手动添加语句case，如果我们忘记，这可能导致难以调试和嵌套错误！
+switch有点陈旧和笨重，并且容易出现调试错误</p></li><li><p>2）、**对象方式有这样的好处：**对象更灵活，具有更好的可读性和可维护性，我们不需要手动break;每个“案例”。他们对新的JavaScript开发人员也很友好，因为他们是标准对象。
+随着“案例”数量的增加，**对象（哈希表）**的性能优于交换机的平均成本（案例的顺序很重要）。对象方法是哈希表查找，并且交换机必须评估每个案例，直到它遇到匹配和中断。
+<strong>对象文字可以包含函数以及任何其他对象类型</strong>，这使它们非常灵活！文字中的每个函数也都有函数作用域，因此我们可以从我们调用的父函数getDrink返回闭包（在这种情况下返回闭包）。</p></li></ul><p>下面是很好的两段代码：</p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getDrink</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> drink<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> drinks <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'coke'</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      drink <span class="token operator">=</span> <span class="token string">'Coke'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'pepsi'</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      drink <span class="token operator">=</span> <span class="token string">'Pepsi'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'lemonade'</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      drink <span class="token operator">=</span> <span class="token string">'Lemonade'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      drink <span class="token operator">=</span> <span class="token string">'Default item'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// invoke it</span>
+  <span class="token punctuation">(</span>drinks<span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">||</span> drinks<span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// return a String with chosen drink</span>
+  <span class="token keyword">return</span> <span class="token string">'The drink I chose was '</span> <span class="token operator">+</span> drink<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> drink <span class="token operator">=</span> <span class="token function">getDrink</span><span class="token punctuation">(</span><span class="token string">'coke'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// The drink I chose was Coke</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>drink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getSnack</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> snack<span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">isDrink</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> snack <span class="token operator">=</span> <span class="token string">'Drink'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">isFood</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> snack <span class="token operator">=</span> <span class="token string">'Food'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> snacks <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'coke'</span><span class="token punctuation">:</span> isDrink<span class="token punctuation">,</span>
+    <span class="token string">'pepsi'</span><span class="token punctuation">:</span> isDrink<span class="token punctuation">,</span>
+    <span class="token string">'cookies'</span><span class="token punctuation">:</span> isFood<span class="token punctuation">,</span>
+    <span class="token string">'crisps'</span><span class="token punctuation">:</span> isFood<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> snacks<span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> snack <span class="token operator">=</span> <span class="token function">getSnack</span><span class="token punctuation">(</span><span class="token string">'coke'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>snack<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Drink'</span>
+</code></pre></div><p>**[tlm]时刻：**在项目中我经常会使用switch，此后会注意这块这样书写更好。</p><h2 id="_3、嵌套三元"><a href="#_3、嵌套三元" aria-hidden="true" class="header-anchor">#</a> 3、嵌套三元</h2><p>**[tlm]时刻：**这个东西之前还真没有这样用过，get。</p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token operator">!</span>conditionA
+  <span class="token operator">?</span> <span class="token string">&quot;Not A&quot;</span>
+  <span class="token punctuation">:</span> conditionB
+  <span class="token operator">?</span> <span class="token string">&quot;A &amp; B&quot;</span>
+  <span class="token punctuation">:</span> <span class="token string">&quot;A&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>[tlm]时刻：</strong> 刚在项目中测试，公司的框架中eslint配置的不让这样使用。。。</p><h2 id="_4、-变量命名的艺术"><a href="#_4、-变量命名的艺术" aria-hidden="true" class="header-anchor">#</a> 4、 变量命名的艺术</h2><p><a href="https://hackernoon.com/the-art-of-naming-variables-52f44de00aad" target="_blank" rel="noopener noreferrer">The art of naming variables<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p><p>汲取：</p><ul><li>Booleans：变量命名时增加“is”, “has”, and “can”前缀</li><li>对于返回boolean值的函数，可以在前面增加check或者get，如heckHasFruit</li><li>函数命名使用动词和名词结合：如getUser，calculateTotal</li><li>用于转化的函数命名增加to：如toDollar，toUppercase</li><li>函数参数最好也是用一些有意义的名字：如：<code>const newFruits = fruits.map(fruit =&gt; { return doSomething(fruit); });</code></li></ul><h2 id="_5、一个循环把一个数组分成两个数组"><a href="#_5、一个循环把一个数组分成两个数组" aria-hidden="true" class="header-anchor">#</a> 5、一个循环把一个数组分成两个数组</h2><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> exampleValues <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>truthyValues<span class="token punctuation">,</span> falseyValues<span class="token punctuation">]</span> <span class="token operator">=</span> exampleValues<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>arrays<span class="token punctuation">,</span> exampleValue<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>exampleValue <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arrays<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>exampleValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> arrays<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+arrays<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>exampleValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> arrays<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>truthyValues<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [15, 23, 32]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>falseyValues<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [2, 8, 1]</span>
+
+</code></pre></div></div><div class="content edit-link"><!----><!----></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/my-blog/frontEnd/review/17-21.html" class="prev">
+          2018尾巴②
+        </a></span><span class="next"><a href="/my-blog/frontEnd/tools/">
+          平常工具
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/my-blog/assets/js/12.b65eeaca.js" defer></script><script src="/my-blog/assets/js/34.37afa23d.js" defer></script><script src="/my-blog/assets/js/app.c2d9e473.js" defer></script>
+  </body>
+</html>
