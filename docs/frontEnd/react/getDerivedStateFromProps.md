@@ -204,7 +204,7 @@ class NameForm extends React.Component {
 
 ## 3.扩展-派生状态
 
-**【tlm时刻】（个人理解，或有不对之处）** ： 派生状态———即数据来源不止一处，比如有的state初始受props定义，后面又能在子组件中通过用户行为更改。
+所有关于派生状态的问题最后都可以被归为两种：（1）从props那里无条件地更新state（2）当props和state不匹配的时候更新state
 
 官网上有篇文章[你可能不需要使用派生 state](https://zh-hans.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state)涵盖了所有的内容
 

@@ -25,6 +25,7 @@
 					'react-bgcolor':this.tagName ==='react',
 					'immutable-bgcolor':this.tagName ==='immutable',
 					'npm-bgcolor':this.tagName ==='npm',
+					'json-bgcolor':this.tagName ==='json',
 				}
             }
         }
@@ -73,6 +74,7 @@
         span.react-bgcolor{background:#ee3b71;&:after{border-right-color:#ee3b71;}}
         span.immutable-bgcolor{background:#d1e424;&:after{border-right-color:#d1e424;}}
         span.npm-bgcolor{background:#23aaad;&:after{border-right-color:#23aaad;}}
+        span.json-bgcolor{background:#1f6fe6;&:after{border-right-color:#1f6fe6;}}
     }
 </style>
 

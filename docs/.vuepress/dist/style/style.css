@@ -63,5 +63,34 @@ html,body, #app{height:100%;overflow: hidden;}
     background:#f7fafe;
 }
 #app  .content:not(.custom) {
-    max-width: 50rem;
+    max-width: 100%;
+    padding:2rem 6rem;
 }
+
+/* 左侧导航 */
+#app .sidebar-group{
+    background: #e4eef04f;
+}
+#app .sidebar-group-items{
+    background: #f7fafe;
+}
+#app .sidebar-group-items li{
+   border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+}
+#app .sidebar a{
+    color:#2c3e50ad;
+}
+#app .sidebar-group a.sidebar-link{
+    padding-left:1.5rem;
+}
+#app .sidebar-heading{
+    margin-bottom:0;
+}
+#app .sidebar-heading .arrow {
+    position: relative;
+    top: 0.5em;
+    left: -1.2em;
+    float: right;
+    border-width: 6px;
+}
+

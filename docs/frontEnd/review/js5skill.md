@@ -7,7 +7,7 @@
 
 原文：【[5 Programming Patterns I Like](https://www.johnstewart.dev/five-programming-patterns-i-like/)】
 这篇文章中列举了下面几个比较好的js使用技巧：
-## 1、early exits
+## 1.early exits
 
 对一些条件判断，提早做一些返回。这样能够注意到考虑的能更全面，能注意到参数的有效性；代码更好理解和可读；该函数读取更线性;嵌套减少，使功能更容易阅读。If-else构造将更紧密地结合在一起，你将更少地打开和关闭括号;
 
@@ -47,9 +47,11 @@ function fireZeMissiles(amount) {
     
 }
 ```
+
 对以上的代码实行the bouncer pattern进行重构：
 
-```
+
+```js
 function fireZeMissiles(amount) {
     if (!amount) {
         // au revoir mon minion!
@@ -66,8 +68,8 @@ function fireZeMissiles(amount) {
 ```
 当使用保镖模式时，我们首先测试参数有效性，然后转到实际的功能逻辑。当我们发现一个有争议的腥味时，我们使用该return语句来停止函数执行。
 
-**[tlm]时刻：**
-## 2、将switch代码写成object的形式更优
+
+## 2.将switch代码写成object的形式更优
 
 ```js
 // Switch
@@ -104,12 +106,14 @@ createType();
 [用Object文字替换switch语句](https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals)
 这篇文章中提出一些观点：
 
-* 1）、**switch有这样的问题：**switch从程序控制流程到其处理代码块的非标准方式存在多个问题，其余的JavaScript使用花括号而交换机则不然。从语法上讲，它不是JavaScript的最佳选择，也不是它的设计。我们被迫break;在每个语句中手动添加语句case，如果我们忘记，这可能导致难以调试和嵌套错误！
+* 1） **switch有这样的问题：** 
+switch从程序控制流程到其处理代码块的非标准方式存在多个问题，其余的JavaScript使用花括号而交换机则不然。从语法上讲，它不是JavaScript的最佳选择，也不是它的设计。我们被迫break;在每个语句中手动添加语句case，如果我们忘记，这可能导致难以调试和嵌套错误！
 switch有点陈旧和笨重，并且容易出现调试错误
 
-* 2）、**对象方式有这样的好处：**对象更灵活，具有更好的可读性和可维护性，我们不需要手动break;每个“案例”。他们对新的JavaScript开发人员也很友好，因为他们是标准对象。
-随着“案例”数量的增加，**对象（哈希表）**的性能优于交换机的平均成本（案例的顺序很重要）。对象方法是哈希表查找，并且交换机必须评估每个案例，直到它遇到匹配和中断。
-**对象文字可以包含函数以及任何其他对象类型**，这使它们非常灵活！文字中的每个函数也都有函数作用域，因此我们可以从我们调用的父函数getDrink返回闭包（在这种情况下返回闭包）。
+* 2）**对象方式有这样的好处：** 
+对象更灵活，具有更好的可读性和可维护性，我们不需要手动break;每个“案例”。他们对新的JavaScript开发人员也很友好，因为他们是标准对象。
+随着“案例”数量的增加，对象（哈希表）的性能优于交换机的平均成本（案例的顺序很重要）。对象方法是哈希表查找，并且交换机必须评估每个案例，直到它遇到匹配和中断。
+**对象文字可以包含函数以及任何其他对象类型**，这使它们非常灵活！文字中的每个函数也都有函数作用域，因此我们可以从我们调用的父函数返回闭包。
 
 下面是很好的两段代码：
 
@@ -165,10 +169,12 @@ var snack = getSnack('coke');
 console.log(snack); // 'Drink'
 ```
 
-**[tlm]时刻：**在项目中我经常会使用switch，此后会注意这块这样书写更好。
+**[tlm]时刻：** 
+在项目中我经常会使用switch，此后会注意这块这样书写更好。
 
-## 3、嵌套三元
-**[tlm]时刻：**这个东西之前还真没有这样用过，get。
+## 3.嵌套三元
+**[tlm]时刻：**
+这个东西之前还真没有这样用过，get。
 
 ```js
 const result = !conditionA
@@ -177,8 +183,9 @@ const result = !conditionA
   ? "A & B"
   : "A";
 ```
-**[tlm]时刻：** 刚在项目中测试，公司的框架中eslint配置的不让这样使用。。。
-## 4、 变量命名的艺术
+**[tlm]时刻：** 
+刚在项目中测试，公司的框架中eslint配置的不让这样使用。。。
+## 4. 变量命名的艺术
 [The art of naming variables](https://hackernoon.com/the-art-of-naming-variables-52f44de00aad)
 
 汲取：
@@ -190,7 +197,7 @@ const result = !conditionA
 * 函数参数最好也是用一些有意义的名字：如：`const newFruits = fruits.map(fruit => {
     return doSomething(fruit);
 });`
-## 5、一个循环把一个数组分成两个数组
+## 5.一个循环把一个数组分成两个数组
 
 ```js
 const exampleValues = [2, 15, 8, 23, 1, 32];

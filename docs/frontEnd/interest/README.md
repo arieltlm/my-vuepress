@@ -126,8 +126,8 @@ head:[
 ```bash
 git init
 git add -A
-git commit -m ‘delopy’
-git push -f [你的github库](如我的https://github.com/arieltlm/my-blog.git) master:gh-pages
+git commit -m 'delopy'
+git push -f https://github.com/arieltlm/my-blog.git master:gh-pages
 ```
 
 ## 6. vuepress中markdown中git命令行高亮的代码为bash
