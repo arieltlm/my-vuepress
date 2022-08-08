@@ -23,21 +23,24 @@ npm ：
 
 邮箱：*
 
-* npm login 登陆
-* npm adduser：或在文件夹中使用此登陆
-* npm publish：在本文件夹中直接执行此即可（加sudo）
-* 要把源（http://registry.npm.taobao.org）切回原来的源（否则报错403）方法有两种：
+* 要把源（http://registry.npm.taobao.org）切回原npm的源（否则报错403）：
 
     + 1）修改~/.npmrc中的registry字段（命令：vi ~/.npmrc）
 
     + 2）直接在命令行修改即可。
-
-    ```bash
+    
+    ```
     npm set registry http://registry.npmjs.org
     ```
-* 发布自己测试的包要删除的话需在24小时之内：
+* 内网包需要更改源为内网源，然后需要登陆 `npm login`，与公网登陆名用户名一致
+* 登陆：`npm login`
+* npm adduser：或在文件夹中使用此登陆
+* 发布包：`npm publish`
 
-```bash
+* 取消发布包：`npm unpublish 包名字@version`
+
+* 发布自己测试的包要删除的话需在24小时之内：
+```
 npm --force unpublish testxxxxx
 ```
 * package.json中name的名字即包的名字，发布之后等一会会npm网站上自己的首页就可以看到了
@@ -53,23 +56,22 @@ npm --force unpublish testxxxxx
     + 修订号：当你做了向下相容的问题修正。
 
     先行版号及版本编译资讯可以加到「主版号.次版号.修订号」的后面，作为延伸。
-
-```bash
+    
+```
 // 标记版本号
 命令：sudo npm publish --tag 0.0.1
-
 ```
-## 关于npm包的测试：
+* 包测试：`npm link`
 
->在你执行完npm init这个步骤之后，你把代码扔进这个包里面后，就形成了一个本地的包，可以直接把这个包扔到项目里面node_module这个文件夹里面的，然后在你的项目里面就可以直接：
+>cd到模块目录，npm link，进行全局link
 
-  ```js
-  var a=require('你的包名');
-  ```
-  
->直接使用包名引入，不用文件路径了，就像引入fs或者http模块一样
-测试完确定没有什么bug之后再执行npm publish哦
+>cd到项目目录，npm link 模块名(package.json中的name)
 
+>解除link
+
+>解除项目和模块link，项目目录下，npm unlink 模块名
+
+>解除模块全局link，模块目录下，npm unlink 模块名
 
 ## 发布的包：
 

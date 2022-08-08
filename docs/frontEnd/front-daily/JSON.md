@@ -23,6 +23,17 @@
 }
 ```
 
+```js
+JSON.parse('"hello"')
+"hello"
+JSON.parse(null)
+null
+JSON.parse(21)
+21
+JSON.parse(true)
+true
+```
+
 ## 2.JSON.stringify()
 
 ——将js对象序列化成JSON字符串
@@ -194,7 +205,6 @@ console.log(obj) // {name: "Tom"}
 console.log(obj1) // {}
 console.log(obj1.name) // "Tom" (原型上存在name属性)
 console.log(obj1.__proto__) // {name: "Tom"}
-console.log(obj1.__proto__ == obj.prototype) // false
 
 
 const obj2 = JSON.parse(JSON.stringify(obj1));

@@ -152,6 +152,69 @@ head: [
 
 或者在override.styl文件中直接添加也可以
 
-# 8. .md文件中添加图片
+## 8. .md文件中添加图片
 
 ![md文件中添加图片](../images/img.png)
+
+## 9. 代码中的行高亮,添加显示行号
+
+如下第5行是高亮的，在```js 增加{5}即可
+
+```js {5}
+console.log(111);
+
+var a = 1 + 1;
+// 输出a
+console.log(a)
+```
+
+在config.js中配置下面的markdown配置，可显示行号：
+
+```js
+module.exports = {
+  markdown: {
+    lineNumbers: true
+  }
+}
+```
+
+## 10. 显示各类信息
+
+```bash
+::: tip
+这是一个提示
+:::
+
+::: warning
+这是一个警告
+:::
+
+::: danger
+这是一个危险警告
+:::
+
+::: details
+这是一个详情块，在 IE / Edge 中不生效
+:::
+
+```
+
+::: tip
+这是一个提示
+:::
+
+::: warning
+这是一个警告
+:::
+
+::: danger
+这是一个危险警告
+:::
+
+::: details
+这是一个详情块，在 IE / Edge 中不生效
+:::
+
+## 11.资源列表
+
+### [表情小图标列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json)

@@ -3,7 +3,8 @@
 
 [[toc]]
 
-![solar](../images/solar.png)
+<!-- ![solar](../images/solar.png) -->
+![solar](~@alias/solar.png)
 <!-- ![solar.png](https://i.loli.net/2018/07/26/5b59c5192a891.png) -->
 
 项目要求首页必须酷炫，所以设计成类太阳系，如上图。
