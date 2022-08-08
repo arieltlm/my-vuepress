@@ -187,6 +187,12 @@ git branch -a
 git remote -v
 ```
 
+### 17).查看git配置
+
+```bash
+git config --list
+```
+
 ## 2. git 回退历史版本
 
 
@@ -509,3 +515,32 @@ git clone https://github.com/microsoft/TypeScript --depth=1 ts
 
 在后面增加`--depth=`等于几即下载几个commit，内容少速度就上去了；
 缺点是：不能切换到历史 commit 和历史分支
+
+## 15.fatal: Authentication failed for 'https://github.com/arieltlm/my-blog.git/'
+
+> emote: Support for password authentication was removed on August 13, 2021.
+>remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/>about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+>fatal: Authentication failed for 'https://github.com/arieltlm/my-blog.git/'
+
+大概意思就是2021.8月份开始远程登录不在支持使用账户密码的方式
+
+解决办法参考[Github即日起不再支持基于密码的授权方式：Support for password authentication was removed on August 13, 2021](https://blog.csdn.net/vitaviva/article/details/119842190?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.no_search_link&spm=1001.2101.3001.4242.2)这篇文章讲的很清楚
+
+总结如下：
+
+去github-settings/Developer Settings/Personal access tokens中生成token，需要复制记录起来，下次进入不可查看，note可以随便写；
+然后拿着生成的token 在git push时要输入username和password，此时password中输入刚生成的token；还可以——
+
+```bash
+$ git push https://$your_token@github.com/username/repo.git
+```
+为了避免每次输入，直接修改远程仓库地址，加上token：
+
+```bash
+$ git remote set-url origin https://$your_token@github.com/username/repo.git
+```
+如果push 的时候没有提示输入用户名密码，此时可以先输入以下命令：
+
+```bash
+git config --system --unset credential.helper
+```
