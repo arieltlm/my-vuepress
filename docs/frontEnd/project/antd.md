@@ -1,5 +1,5 @@
 # antd3.x使用
->2019-09-06
+
 <tag-part tagName="react"/>
 
 [[toc]]
@@ -369,7 +369,7 @@ alias: {
 
 来自[github issue](https://github.com/react-component/table/issues/368)
 
-![WX20200325-175759.png](https://i.loli.net/2020/03/25/wfXzYNoPeHKvFR9.png)
+![image.png](~@alias/antd-table-mis.png)
 
 ## 5.form校验-一行写多个检验
 每个formitem中只能写一个校验

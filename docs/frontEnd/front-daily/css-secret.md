@@ -1,6 +1,6 @@
 # 学习笔记《css揭秘》
 
->2018-08-06
+>2019-03-06
 <tag-part tagName="css"/>
 
 [[toc]]
@@ -29,7 +29,7 @@ li{
 
 ```
 
-![WX20180806-164532.png](https://i.loli.net/2018/08/06/5b680abe0c14e.png)
+![image.png](~@alias/css-secret/css-secret1.png)
 
 ## 2. 背景与边框
 
@@ -61,7 +61,7 @@ li{
 }
 ```
 **效果**：
-![WX20180724-212021@2x.png](https://i.loli.net/2018/07/24/5b5727ae986f1.png)
+![image.png](~@alias/css-secret/css-secret2.png)
 
 **扩展——background**：
 
@@ -114,7 +114,8 @@ background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-att
 >而`100% 100%`，是进行了不保持长宽比的缩放完全覆盖div；
 
 **效果**：
-![WX20180724-215856@2x.png](https://i.loli.net/2018/07/24/5b5730c70b844.png)
+
+![image.png](~@alias/css-secret/css-secret3.png)
 
 * **background-origin:** padding-box(默认)|border-box|content-box;
 
@@ -154,7 +155,7 @@ background-position:calc(100% - 20px) calc(100% - 10px);
 
 ####  2) 多重边框
 
-![WX20180724-222502@2x.png](https://i.loli.net/2018/07/24/5b5736e072eaf.png)
+![image.png](~@alias/css-secret/css-secret4.png)
 
 * `box-shadow`:可实现多重边框(注意第四个值为累加)
 ```css
@@ -196,7 +197,7 @@ border-radius: .8em;
 box-shadow: 0 0 0 .6em #655; /*投影扩张值不能超过（根号2-1）*r。 */
 outline: .7em solid #655;
 ```
-![WX20180726-143259.png](https://i.loli.net/2018/07/26/5b596b37bccd7.png)
+![image.png](~@alias/css-secret/css-secret5.png)
 
 ###  4). 条纹背景
 
@@ -259,11 +260,12 @@ background-image:repeating-linear-gradient(30deg,
 							hsla(0,0%,100%,0.1) 15px,
 							transparent 0,transparent 30px);
 ```
-![WX20180726-234007@2x.png](https://i.loli.net/2018/07/26/5b59eb7524242.png)
+
+![image.png](~@alias/css-secret/css-secret6.png)
 
 ###  5) 连续的边框背景
 
-![WX20180730-142351.png](https://i.loli.net/2018/07/30/5b5eb4425b9db.png)
+![image.png](~@alias/css-secret/css-secret7.png)
 
 ```css
 .zero{
@@ -347,7 +349,7 @@ background-image:repeating-linear-gradient(30deg,
 
 ### 1). 自适应椭圆
 
-![WX20180730-144851.png](https://i.loli.net/2018/07/30/5b5eb4dbb63fd.png)
+![image.png](~@alias/css-secret/css-secret8.png)
 
 ```css
 .zero{
@@ -388,7 +390,7 @@ background-image:repeating-linear-gradient(30deg,
 }
 ```
 
-![WX20180730-150656@2x.png](https://i.loli.net/2018/07/30/5b5eb91bcfdaf.png)
+![image.png](~@alias/css-secret/css-secret9.png)
 
 ### 2). 变形元素
 
@@ -449,13 +451,11 @@ background-image:repeating-linear-gradient(30deg,
 }
 ```
 
-
-![WX20180730-154932.png](https://i.loli.net/2018/07/30/5b5ec3164e800.png)
+![image.png](~@alias/css-secret/css-secret10.png)
 
 ### 4). 切角
 
-[![WX20180730-172538.png](https://i.loli.net/2018/07/30/5b5ed9a66e14a.png)](https://i.loli.net/2018/07/30/5b5ed9a66e14a.png)
-
+![image.png](~@alias/css-secret/css-secret11.png)
 ```css
 .zero,.one,.two,.three,.four,.five,.six{
 	width:100px;
@@ -543,7 +543,7 @@ $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
 ### 1). 单侧阴影
 
 
-![WX20180730-182428.png](https://i.loli.net/2018/07/30/5b5ee8e9af032.png)
+![image.png](~@alias/css-secret/css-secret12.png)
 
 ```css
 .two{
@@ -563,7 +563,7 @@ $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
 
 ### 2). 不规则投影
 
-![WX20180731-102126.png](https://i.loli.net/2018/07/31/5b5fc8be1ca8e.png)
+![image.png](~@alias/css-secret/css-secret13.png)
 
 ```css
 .two{
@@ -602,7 +602,7 @@ $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
 
 #### **扩展filter**：
 
-![WX20180731-122237.png](https://i.loli.net/2018/07/31/5b5fe4279c090.png)
+![image.png](~@alias/css-secret/css-secret14.png)
 
 ```css
 .blur {
@@ -649,7 +649,7 @@ $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
 ### 3). 毛玻璃效果
 
 
-![WX20180801-101609.png](https://i.loli.net/2018/08/01/5b611804cef4d.png)
+![image.png](~@alias/css-secret/css-secret15.png)
 
 > 这个代码做出来的效果和调背景透明度的效果基本一致，不知道问题在哪，在此不贴代码了，书上针对的是背景使用的fixed的效果，感觉不常用，不作研究了。
 
@@ -675,9 +675,10 @@ $tl:0, $tr:$tl, $br:$tl, $bl:$tr) {
 	background: url('images/tiger.jpg') 0/cover fixed;
 }
 ```
-![WX20180801-123711.png](https://i.loli.net/2018/08/01/5b61394d62b39.png)
-![WX20180801-123654.png](https://i.loli.net/2018/08/01/5b61394d637ba.png)
-![WX20180801-123731.png](https://i.loli.net/2018/08/01/5b61394d64442.png)
+
+![image.png](~@alias/css-secret/css-secret16.png)
+![image.png](~@alias/css-secret/css-secret17.png)
+![image.png](~@alias/css-secret/css-secret18.png)
 
 综上： 毛玻璃效果的代码如下：
 
@@ -700,7 +701,7 @@ main:before{
 ```
 ### 4) 折角效果
 
-![WX20180802-152754.png](https://i.loli.net/2018/08/02/5b62bdeaa8641.png)
+![image.png](~@alias/css-secret/css-secret19.png)
 
 ```css
 .zero{
@@ -766,7 +767,7 @@ main:before{
 }
 ```
 
-![WX20180802-162648@2x.png](https://i.loli.net/2018/08/02/5b62c0618c711.png)
+![image.png](~@alias/css-secret/css-secret20.png)
 
 ## 5. 文字效果
 
@@ -809,7 +810,7 @@ dd + dd:before{
 }
 ```
 ### 2). 文本的斑马纹和`tab-size`
-![WX20180802-175530.png](https://i.loli.net/2018/08/02/5b62d5279b96c.png)
+![image.png](~@alias/css-secret/css-secret21.png)
 
 ```css
 pre{
@@ -825,7 +826,7 @@ pre{
 
 ### 3). 凸版印刷效果
 
-![WX20180802-184641.png](https://i.loli.net/2018/08/02/5b62e14dada9e.png)
+![image.png](~@alias/css-secret/css-secret22.png)
 
 ```css
 // 背景为浅色，字为深色，字投影要用浅色投影；（1）和（2）分别为加投影前后的效果
@@ -843,7 +844,7 @@ pre{
 ```
 ### 4) 空心字、字外发光、立体字效果
 
-![WX20180803-112716.png](https://i.loli.net/2018/08/03/5b63cba2f1cb3.png)
+![image.png](~@alias/css-secret/css-secret23.png)
 
 ```css
 .two{
@@ -881,7 +882,7 @@ pre{
 
 ### 5). 文字下划线
 
-![WX20180803-134619.png](https://i.loli.net/2018/08/03/5b63ec3eb393d.png)
+![image.png](~@alias/css-secret/css-secret24.png)
 
 
 ```css
@@ -993,7 +994,7 @@ input[type="radio"]:disabled + label::before {
 }
 ```
 
-![WX20180803-173129.png](https://i.loli.net/2018/08/03/5b642136b4656.png)
+![image.png](~@alias/css-secret/css-secret25.png)
 
 ### 2). 滚动上下的过度样式
 
@@ -1018,7 +1019,7 @@ ul {
 }
 ```
 
-![WX20180803-185526.png](https://i.loli.net/2018/08/03/5b6434c332700.png)
+![image.png](~@alias/css-secret/css-secret26.png)
 
 
 ### 3). css resize
@@ -1046,7 +1047,7 @@ div{
 }
 ```
 
-![WX20180803-185546.png](https://i.loli.net/2018/08/03/5b6434c333f49.png)
+![image.png](~@alias/css-secret/css-secret27.png)
 
 ### 4). 交互式的图片对比控件
 
@@ -1095,7 +1096,7 @@ css代码：
 
 ```
 
-![WX20180806-102158.png](https://i.loli.net/2018/08/06/5b67b1572fbc7.png)
+![image.png](~@alias/css-secret/css-secret28.png)
 
 ### 2). `table-layout:fixed;`
 
@@ -1134,7 +1135,7 @@ li {
 }
 ```
 
-![WX20180806-122706.png](https://i.loli.net/2018/08/06/5b67d5fa43924.png)
+![image.png](~@alias/css-secret/css-secret29.png)
 
 ```css
 li:first-child:nth-last-child(4),
@@ -1303,7 +1304,7 @@ body {
 ```
 图片是：八个状态分8步完成。（一般使用gif来实现）
 
-![loading.png](https://i.loli.net/2018/08/06/5b680305354c1.png)
+![image.png](~@alias/css-secret/css-secret30.png)
 
 ### 3). 闪烁效果
 

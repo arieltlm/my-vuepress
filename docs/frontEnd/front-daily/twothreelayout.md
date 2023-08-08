@@ -213,7 +213,8 @@ BFC 规则————块格式化上下文
 }
 ```
 目前grid布局的兼容性还不是很好。如下图（2019-07-22）：
-[![WX20190722-162758.png](https://i.loli.net/2019/07/22/5d3573b0d904b85764.png)](https://i.loli.net/2019/07/22/5d3573b0d904b85764.png)
+
+![image.png](~@alias/ttlayout1.png)
 
 
 ### 2) flex
@@ -274,7 +275,7 @@ BFC 规则————块格式化上下文
 
 html不动，采用上面的css会产生这样的效果：
 
-[![WX20190722-163812.png](https://i.loli.net/2019/07/22/5d3576135c81a69391.png)](https://i.loli.net/2019/07/22/5d3576135c81a69391.png)
+![image.png](~@alias/ttlayout2.png)
 
 然后将html中中间自适应的div放到左右浮动的两div后面三个div就都可以处于一条线上，且中间div自适应宽度：
 

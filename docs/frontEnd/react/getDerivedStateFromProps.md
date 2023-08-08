@@ -1,7 +1,7 @@
 # getDerivedStateFromProps
 # 相关理解和记录(结合官网)
 
-> 2019-07-19
+
 <tag-part tagName="react"/>
 
 [[toc]]

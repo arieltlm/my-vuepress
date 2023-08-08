@@ -1,6 +1,5 @@
 # Immutable使用
 
->2019-09-05
 <tag-part tagName="immutable"/>
 
 [[toc]]
@@ -12,9 +11,9 @@ const allDatasGroupBy = allDataValues.toList().groupBy(x => x.get('floor'))
 
 使用`groupBy`将`List`转为以某个元素分组的“Map”之后，其实得到的是`OrderedMap`，而并不是`Map`，所以获取其某一项值，就需要注意了，如果分组的`key`是`number`的话(只要能转成number，它分组之后就是number，请看第二张图片，即使是-1)，就不能按Map那样的获取用`get(string)`来取值，需要`get(number)`来获取；如果分组的`key`是`string`的话，就按`get(string)`来获取即可
 
-![WX20190905-152443@2x.png](https://i.loli.net/2019/09/05/ULoMPwTGKpR2cva.png)
+![WX20190905-152443@2x.png](~@alias/immutable/immutable1.png)
 
-![WX20190905-154506@2x.png](https://i.loli.net/2019/09/05/6olAYTbVpGIOd95.png)
+![WX20190905-154506@2x.png](~@alias/immutable/immutable2.png)
 
 ## 2.Map可以使用merge，或者mergeDeep
 
@@ -57,8 +56,7 @@ console.log(newArrState.get('allDataArr').toJS())
 console.log(newArrStates.get('allDataArr').toJS())
 
 ```
-
-![WX20190905-170438@2x.png](https://i.loli.net/2019/09/05/I7VCr4gcbsDqxmE.png)
+![WX20190905-154506@2x.png](~@alias/immutable/immutable3.png)
 
 
 **同时数组中更新还可以直接具体到某一项，比如要更新第一个元素:**

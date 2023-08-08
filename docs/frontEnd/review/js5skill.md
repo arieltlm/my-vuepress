@@ -1,6 +1,6 @@
 # 五个js技巧
 
->2019-07-16
+
 <tag-part tagName="js"/>
 
 [[toc]]

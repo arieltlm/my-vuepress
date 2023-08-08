@@ -9,7 +9,7 @@
 ### 1). $0
 在 Chrome 的 Elements 面板中，`$0`是当前我们选中的html节点的引用。`$1`是上一次的，`$2`是上上一次...`$4`是上上上一次的。
 
-![WX20190319-111216.png](https://i.loli.net/2019/03/19/5c905e1c1b7e4.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool1.png)
  
  可试用——`$1.appendChild($0)`
  
@@ -41,7 +41,7 @@
 ### 2).Store as global
 
 console里的数据变量，可以变成全局变量，来用。自动创建名称`temp1`，`temp2`...
-![WX20190319-142801@2x.png](https://i.loli.net/2019/03/19/5c908bffaf3e9.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool2.png)
 
 ### 3).保存(Stack trace)堆栈跟踪
 
@@ -58,7 +58,7 @@ console里的数据变量，可以变成全局变量，来用。自动创建名�
 语法：
 `console.assert(assertion, obj1[,obj2,...,objN])`
 
-![WX20190319-143743.png](https://i.loli.net/2019/03/19/5c908e41e0e54.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool3.png)
 
 其可以替代if来方便做一些事情，在第一个参数为假的时候，后面的执行
 
@@ -66,12 +66,12 @@ console里的数据变量，可以变成全局变量，来用。自动创建名�
 
 数组或者对象都可以打印成表格的形式，可缩放，可排序，可传入第二个参数来制定表头
 
-![WX20190319-144151@2x.png](https://i.loli.net/2019/03/19/5c908f3a49d79.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool4.png)
 
 ### 3).console.dir
 打印一个 DOM 节点,想要查看这个节点所关联到的真实的 JavaScript 对象呢？并且想要查看他的属性等等
 
-![WX20190319-144355.png](https://i.loli.net/2019/03/19/5c908fb792bf3.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool5.png)
 ### 4).console.log设置不同的样式显示
 
 ```js
@@ -82,7 +82,7 @@ function test11() {
     test1('zhang')
 }
 ```
-![WX20190319-182515@2x.png](https://i.loli.net/2019/03/19/5c90c3bf749ae.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool6.png)
 
 ### 5).更清晰的打印出来多个变量
 
@@ -101,7 +101,7 @@ console.log({name,age,id,user});
 
 console.table({name,age,id,user});
 ```
-![WX20190319-184325@2x.png](https://i.loli.net/2019/03/19/5c90c7dce1b3d.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool7.png)
 
 ## 4. the Elements panel（元素面板）
 
@@ -126,7 +126,7 @@ console.table({name,age,id,user});
 ### 1). Command (命令) 菜单
 
 cmd+shift+p（或者右上角三点出点Run command）即可调出来command菜单。
-![WX20190319-152926@2x.png](https://i.loli.net/2019/03/19/5c909a5f42b0b.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool8.png)
 
 ### 2). command命令截图
 
@@ -146,7 +146,7 @@ cmd+shift+p打开command菜单,然后搜索theme，可以切换dark或者light�
 
 ### 1). 文本和背景的对比色
 
-![WX20190319-162357.png](https://i.loli.net/2019/03/19/5c90a72c17976.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool9.png)
 
 点击contrast ratio的小三角然后在上面的颜色中就会出现一条线，线上面的颜色表明此文本颜色与背景对比不好，线下面的颜色表明此文本颜色与背景色对比好，同时会显示禁止符号和绿色的对号
 
@@ -168,17 +168,17 @@ cmd+shift+p打开command菜单，搜索time，点击show timeStamps/hide timeSta
 ### 1). shadow editor
 
 在box-shadow或者text-shadow前面如同点击color picker的地方有一个图标点开后，可以调整shadow值。同时在页面上可看到效果。great！
-![WX20190319-173457@2x.png](https://i.loli.net/2019/03/19/5c90b7e238a45.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool10.png)
 
 ### 2). Timing function editor 定时函数编辑器
 
 animation中的贝塞尔变化函数也可以编辑
-![WX20190319-173640@2x.png](https://i.loli.net/2019/03/19/5c90b834d5210.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool11.png)
 
 ### 3). 插入样式规则的按钮
 
 鼠标放在样式最后三个点处，就会出现五个按钮，添加字体阴影、阴影、颜色、背景色以及添加一个写样式的入口
-![WX20190319-174131.png](https://i.loli.net/2019/03/19/5c90b951f3b94.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool12.png)
 
 ## 9.断点设置技巧（超有用）
 
@@ -190,22 +190,22 @@ animation中的贝塞尔变化函数也可以编辑
 
 写代码时没有给代码中添加console.log。或者是在断点执行到这里，需要每次去console中打印出变量来查看，那么可以利用条件断点来添加 console.log / console.table / console.time。执行完后，可以在右边breakpoints下方 右键移除所有断点。
 
-![WX20190319-174726@2x.png](https://i.loli.net/2019/03/19/5c90bab96b208.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool13.png)
 
 ### 3). DOM 断点
 
 可以查看某个元素是在什么时候修改的，监听到节点被添加或者移除，或属性被改变；
 
-![WX20190319-183155@2x.png](https://i.loli.net/2019/03/19/5c90c5951c1f5.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool14.png)
 
 担心你添加了断点的元素被隐藏在一些折叠起来的父级元素中 - 他们会在 Element 中用高亮展示出来。
-![WX20190319-183215@2x.png](https://i.loli.net/2019/03/19/5c90c595d6dd9.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool15.png)
 
 ### 4).MutationObserver （变化观察者）
 监测XHR/fetch 断点。
 
 可以不设置url时，对所有的请求打断点。或者写url的一部分，对此请求打断点
-![WX20190319-183227@2x.png](https://i.loli.net/2019/03/19/5c90c59778c75.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool16.png)
 
 
 ## 10. 对象&方法
@@ -228,12 +228,12 @@ function test121() {
     test1('li')
 }
 ```
-![WX20190319-175602@2x.png](https://i.loli.net/2019/03/19/5c90bcbd6d2cd.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool17.png)
 
 ### 3).monitorEvents函数
 可以监测元素上的事件
 
-![WX20190319-182041@2x.png](https://i.loli.net/2019/03/19/5c90c298eddf8.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool18.png)
 
 ## 11.快捷键
 * h 隐藏元素
@@ -243,16 +243,16 @@ function test121() {
 * ctrl+[,ctrl+]来在elements、console、source等之间依次切换
 * 按下 ctrl + 1 到 ctrl + 9 转到编号 1...9 的面板(所以 ctrl + 1 转到元素面板，ctrl + 4 转到 网络信息面板等等)[默认未开启，需在settings中开启；同时如果在页面中，这组操作会切换浏览器标签页）
 * 还有数值增加减少的
-![WX20190319-181841@2x.png](https://i.loli.net/2019/03/19/5c90c21de0359.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool19.png)
 
 ## 13 小技巧
 
 ### 1).replay XHR requests (重新发送 XHR 的请求)
-![WX20190319-182734@2x.png](https://i.loli.net/2019/03/19/5c90c4225416f.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool20.png)
 ### 2). 在元素面板中展开所有的子节点
 右击节点后的 expand recursively 命令
 
-![WX20190319-182955@2x.png](https://i.loli.net/2019/03/19/5c90c4b612719.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool21.png)
 
 ## 14. Drawer 
 下面的console等出现隐藏的快捷键——esc
@@ -268,7 +268,7 @@ function test121() {
 
 创建这样一个 Snippet 进入到 Sources 面板，在导航栏里面选中 Snippets 这栏，点击 “New snippet(新建一个代码块)” ,输入你的代码，保存，大功告成！你可以通过右击菜单或者 [ctrl] + [enter] 快捷键来运行它了。
 
-![WX20190321-114535@2x.png](https://i.loli.net/2019/03/21/5c93092df1348.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool22.png)
 
 > 只能在本页面使用这些保存的snippets
 
@@ -287,12 +287,12 @@ function test121() {
 不完全确定要将什么传递给回调函数。在这种情况下，我会在里面添加一个 console.log 来检查。
 
 在回调方法的内部使用 console.log 或者 直接使用 consolelog 来作为回调方法。这不仅可以减少输入，而且可能回调接收多于1个参数，在第一个解决方案中你可能会错过
-![WX20190321-115807@2x.png](https://i.loli.net/2019/03/21/5c930bd777a63.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool23.png)
 ### 2).使用实时表达式
 DevTools 在 Console 面板中引入了一个非常漂亮的附加功能，这是一个名为 Live expression 的工具
 
 只需按下 "眼睛" 符号，你就可以在那里定义任何 JavaScript 表达式。 它会不断更新，所以表达的结果将永远，存在
-![WX20190321-115906@2x.png](https://i.loli.net/2019/03/21/5c930c11be020.png)
+![image.png](~@alias/chrome-devtool/chrome-devtool24.png)
 
 
 > 感谢[dendoink](https://juejin.im/user/585a2f52128fe10069ba1b95)翻译了这篇[你不知道的Chrome调试工具技巧](https://juejin.im/post/5c09a80151882521c81168a2)，并且翻译的这么棒！

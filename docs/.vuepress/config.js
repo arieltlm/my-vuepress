@@ -48,7 +48,11 @@ module.exports = {
 					"/frontEnd/front-daily/JSON",
 					"/frontEnd/front-daily/require-context",
 					"/frontEnd/front-daily/less",
-					"/frontEnd/front-daily/you-dont-know-js-mid",
+					// "/frontEnd/front-daily/you-dont-know-js-mid",
+					"/frontEnd/front-daily/BFC",
+					"/frontEnd/front-daily/typescript",
+					"/frontEnd/front-daily/echarts",
+
 				]
 				},
 				{
@@ -60,6 +64,7 @@ module.exports = {
 					"/frontEnd/vue/vue-getData",
 					"/frontEnd/vue/bus",
 					"/frontEnd/vue/vue-next",
+					"/frontEnd/vue/vue3-first",
 				]
 				},
 				{
@@ -98,10 +103,10 @@ module.exports = {
 				title: "碎片时间", // 侧边栏名称
 				collapsable: true, // 可折叠
 				children: [
+                    "/frontEnd/review/js5skill",
+					"/frontEnd/review/jsskills",
 					"/frontEnd/review/",
 					"/frontEnd/review/181217-21",
-					"/frontEnd/review/js5skill",
-					"/frontEnd/review/jsskills",
 					"/frontEnd/review/1117-22_1",
 					"/frontEnd/review/1123-30_2",
 					"/frontEnd/review/1201-07_3",
@@ -129,10 +134,15 @@ module.exports = {
 					"/frontEnd/solution/gitloadimg",
 					"/frontEnd/solution/mac-install-software",
 					"/frontEnd/solution/mac-chrome-https",
+					"/frontEnd/solution/x64-node-sass",
 				]
 				}
 			],
-			"/life/": ["", "one", "two"]
+			"/life/": [
+                "", 
+                // "one", 
+                "two"
+            ]
 		}
   	}
 };

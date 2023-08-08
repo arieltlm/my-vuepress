@@ -1,5 +1,5 @@
 # ES6编程风格
->2018-04-03
+
 <tag-part tagName="javascript"/><tag-part tagName="es6"/>
 
 [[toc]]

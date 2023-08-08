@@ -1,8 +1,7 @@
 
-# 2018尾巴①
+# 前端爱好者学习周刊：第1期
 
 
->2018-12-14
 <tag-part tagName="html"/><tag-part tagName="css"/><tag-part tagName="js"/>
 
 [[toc]]

@@ -4,7 +4,7 @@ package-lock.json
 *.log
 *-compiled.js
 .DS_Store
-node_modules/
+node_modules
 /dist/
 /dll/
 npm-debug.log*

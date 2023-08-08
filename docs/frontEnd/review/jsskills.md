@@ -1,6 +1,6 @@
 # JS小技巧s
 
-> 2019.11.24
+
 
 <tag-part tagName="js"/>
 

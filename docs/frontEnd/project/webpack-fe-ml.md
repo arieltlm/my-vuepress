@@ -1,5 +1,4 @@
 # cy-ml webpack配置理解
->2018-01-30
 
 [[toc]]
 ## 1.path.resolve()和path.join()

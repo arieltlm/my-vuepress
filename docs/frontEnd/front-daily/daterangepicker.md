@@ -38,7 +38,7 @@ define("gallery/daterangepicker/1.3.7/daterangepicker-bs3.css",[],function(){
 
 在使用中，需要注意datetimepicker的参数配置（这个在官网上都可以查到），此处我想说明的是，可以在官网上下载源码，根据其demo来配置参数了解其各个用处
 
-![image](http://upload-images.jianshu.io/upload_images/6230931-be168163ae890b69..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](~@alias/datetimepicker-params.png)
 
 在上面的复选框中通过选择，可以配置不同的参数。此处简单说明一下自己在项目中所用到的参数，以及使用方法。
 
@@ -131,7 +131,7 @@ function calenders(eles,dobubble,secondNot){
 
 由于daterangepicker没有自带清空功能，而项目要求中，有时候日期框要为空，所以我在input框后面加了一个叉按钮。如下图效果，实现清空
 
-![image](http://upload-images.jianshu.io/upload_images/6230931-6a2a50267cd5c1b0..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](~@alias/datetimepicker-input-clean.png)
 
 代码可以作为参考（这个有各种实现方式）
 ```html
@@ -265,13 +265,10 @@ clickApply: function(e) {
      this.element.trigger('apply.daterangepicker', this);
 },
 ```
-![image](http://upload-images.jianshu.io/upload_images/6230931-74a3147afc112f51..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](~@alias/datetimepicker1.png)
+![image](~@alias/datetimepicker2.png)
+![image](~@alias/datetimepicker3.png)
+![image](~@alias/datetimepicker4.png)
 
-  ![image](http://upload-images.jianshu.io/upload_images/6230931-6d1bcd8e287cb6b7..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-![image](http://upload-images.jianshu.io/upload_images/6230931-59134f7c1b70d36f..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![image](http://upload-images.jianshu.io/upload_images/6230931-2adc8625ea3372d1..png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 

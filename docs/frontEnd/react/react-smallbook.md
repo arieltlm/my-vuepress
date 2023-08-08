@@ -1,5 +1,5 @@
 # React.js小书学习笔记
-> 2019-04-15
+
 <tag-part tagName="react"/>
 
 >[React.js小书](http://huziketang.mangojuice.top/books/react/)写的非常不错，是一本追本溯源的react书籍，值得一读。
@@ -603,7 +603,7 @@ const makeProvider = (params) => (WrappedComponent) => {
 **事后诸葛：**
 原来这个用法是[旧的用法](https://zh-hans.reactjs.org/docs/legacy-context.html)，就说我读过一遍官网的呀，怎么没有发现这个。
 
-![WX20190416-163231@2x.png](https://i.loli.net/2019/04/16/5cb59d14d2d62.png)
+![WX20190905-154506@2x.png](~@alias/react/react-small-book.png)
 
 Context即在需要在组件树中从父组件一直进行向下传递的时候，使用他比较好。
 Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据

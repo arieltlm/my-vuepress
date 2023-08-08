@@ -1,6 +1,6 @@
 # 感受不一样的官网[React]
 ————学习笔记
-> 2019-03-16
+> 2019-08-16
 
 <tag-part tagName="react"/>
 
@@ -287,7 +287,7 @@ var msg = [React.createElement(
     "content"
 )];
 ```
-![WX20190312-203240@2x.png](https://i.loli.net/2019/03/12/5c87a6fe538c7.png)
+![babel-react-array.png](~@alias/react/babel-react-array.png)
 
 *** 
 
@@ -335,7 +335,7 @@ const msg = (
 ```
 >用chrome控制台rendering中paint falshing可以看到，原生js写的整个dom都在重绘，而react只用count部分在重绘（绿色部分为变动的），如下图：
 
-![WX20190312-210134.png](https://i.loli.net/2019/03/12/5c87adbc4ea3c.png)
+![react-repaint.png](~@alias/react/react-repaint.png)
 
 ## 5. component
 
@@ -490,7 +490,7 @@ bing上搜github api，点第一个链接“GitHub API v3 | GitHub Developer Gui
 
 点击Get a single user
 
-![图片 1.png](https://i.loli.net/2019/03/14/5c8a357b9c5c9.png)
+![github-api.png](~@alias/react/github-api.png)
 
 access_token需要在自己的github中获取，
 

@@ -1,5 +1,5 @@
 # JSON
->2020-04-08
+
 <tag-part tagName="json"/><tag-part tagName="js"/>
 
 [[toc]]

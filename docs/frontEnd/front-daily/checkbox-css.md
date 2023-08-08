@@ -8,7 +8,10 @@
 **html**：
 
 ```html
-<span><input type="checkbox" class="input_check" id="check3" value="123"><label for="check1"></label></span>
+<span>
+    <input type="checkbox" class="input_check" id="check3" value="123">
+    <label for="check1"></label>
+</span>
 ```
 **css**:
 
@@ -48,4 +51,4 @@ span{
 
 
 效果如下：
-![327ea443-cb56-48b6-a332-89b68b132f28.png](http://upload-images.jianshu.io/upload_images/6230931-1eda3dab45814a83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![327ea443-cb56-48b6-a332-89b68b132f28.png](~@alias/input-checkbox.png)

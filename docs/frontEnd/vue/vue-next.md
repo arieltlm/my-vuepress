@@ -17,7 +17,7 @@
 
 在webpack.dev.conf.js中（vue-cli实现的vue项目框架已经加上理express），直接引入json文件，然后在devServer中加上get或者post请求，然后就可以在vue中正常请求此服务上产生的数据了：
 
-![WX20180723-110139.png](http://upload-images.jianshu.io/upload_images/6230931-ef6fd991c18bc0d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![WX20180723-110139.png]((~@alias/vue/vue-next.png))
 ```js
 var beijingData = require('../beijing.json')
 
@@ -34,8 +34,7 @@ before(app) {
 
 平时我习惯mock.js产生假数据，所以可以用mock的服务来处理json,同样的在vue中就可以正常请求到了。
 
-
-![WX20180723-110606.png](http://upload-images.jianshu.io/upload_images/6230931-f6504d1819b7b841.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![WX20180723-110139.png]((~@alias/vue/vue-next2.png))
 
 
 
@@ -139,7 +138,7 @@ watch: {
 ## 4. vue-router多重包含的重定向问题
 
 问题描述：
-![WX20180723-124014@2x.png](http://upload-images.jianshu.io/upload_images/6230931-f01e65a6f0b1ba35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![WX20180723-110139.png]((~@alias/vue/vue-next3.png))
 
 我的页面结构是这样的。当时的问题是：在点击四个子页面的时候，内容页一那一层的`.router-link-active`就没了。后来发现是因为我的内容页和子页面写在同一级别上了（怎么说才对呢————就是我的页面一进入内容页一后我需要直接展示子页面一，而我的内容页一和子页面一的路由写成了一样的，这样就导致子页面和内容页一在同一个里面了。所以就点击子页面时，`.router-link-active`就只有一个了。在内容页一二上没有了）。解决办法就是内容页一给一个路由，然后重定向到子页面一上。
 
@@ -222,7 +221,7 @@ import AmPieChart from 'amcharts3/amcharts/pie';
 
 文章最后面说的图标无法显示的问题，如下添加即可：
 
-![WX20180723-124840.png](http://upload-images.jianshu.io/upload_images/6230931-8e4a256d4a9a1347.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![WX20180723-110139.png]((~@alias/vue/vue-next4.png))
 ## 6. vue中父组件向路由页传递值
 
 一开始没明白过来`router-view`上面也可以如同平常组件那样传递props值。所以走了很多弯路。

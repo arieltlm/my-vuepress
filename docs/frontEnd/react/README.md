@@ -1,6 +1,6 @@
 # immutable.js学习笔记
 
->2018-11-06
+
 <tag-part tagName="react"/><tag-part tagName="immutable"/>
 ***
 [[toc]]
@@ -194,7 +194,7 @@ var a = {b:{x:1122,y:123},c:{x:123,m:2342},d:{x:123,j:1111},f:{x:123,k:1111}}
 var b = Immutable.fromJS(a).toList().groupBy(x=>x.get('x'))
 ```
 
-![WX20190107-174208@2x.png](https://i.loli.net/2019/01/07/5c331f157efe5.png)
+![immutable-object-array.png](@alias/react/immutable-object-array.png)
 
 ## 六、 react+redux+immutable
 
