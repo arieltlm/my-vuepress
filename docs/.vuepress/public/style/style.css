@@ -15,6 +15,7 @@ html,body, #app{height:100%;overflow: hidden;}
     background-size:100% 100%;
     vertical-align: middle;
 }
+#app .navbar .links{background: none;}
 #app .search-box input{background-color: #184e94;color:#fff;}
 #app .search-box input:focus{border-color: #fff;}
 

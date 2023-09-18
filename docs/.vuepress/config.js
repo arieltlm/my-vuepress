@@ -48,7 +48,7 @@ module.exports = {
 					"/frontEnd/front-daily/JSON",
 					"/frontEnd/front-daily/require-context",
 					"/frontEnd/front-daily/less",
-					// "/frontEnd/front-daily/you-dont-know-js-mid",
+					"/frontEnd/front-daily/you-dont-know-js-mid",
 					"/frontEnd/front-daily/BFC",
 					"/frontEnd/front-daily/typescript",
 					"/frontEnd/front-daily/echarts",
